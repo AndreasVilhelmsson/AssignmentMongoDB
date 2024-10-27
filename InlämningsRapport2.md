@@ -31,6 +31,7 @@ Relationsdatabaser är vanligtvis starkt typade med fördefinierade datatyper f�
 Collection: En collection är en samling dokument och motsvarar en tabell i en relationsdatabas. Det är en grupp dokument som vanligtvis relaterar till ett gemensamt tema, till exempel recipes för alla recept.
 Document: Ett dokument är en individuell post i en collection, motsvarande en rad i en tabell i en relationsdatabas. Dokumentet innehåller data för ett specifikt objekt och är representerat som en uppsättning fält och värden.
 Field: Ett fält är en nyckel-värdepar i ett dokument, där nyckeln är namnet på egenskapen (t.ex. name, cookingTime) och värdet är datan för den egenskapen. Fält motsvarar kolumner i en tabell.
+
 --- Skriv ovanför och ta inte bort denna raden ---
 
 ### Beskriv vad det är för skillnad på BSON och JSON
