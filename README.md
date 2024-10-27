@@ -166,6 +166,7 @@ db.recipes.deleteMany({ $or: [{ name: "" }, { name: null }] })
 }
 
 ```
+**5.Exempel på denna collection **
 
 ```js
 db.createCollection("recipes", {
