@@ -110,7 +110,7 @@ db.recipes.find({name:'Grilled Chicken'}, {cookingTime: true }).limit(2)
 - Ta bort de recept som matchar
 
 ```javascript
-// Ta bort de recept vars tillagningstid överstiger 60 minuter
+// Ta bort de recept vars tillagningstid överstiger 12 minuter
 db.recipes.deleteMany({ cookingTime: { $gt: 12 } })
 ```
 
