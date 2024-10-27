@@ -116,5 +116,5 @@ db.recipes.deleteMany({ cookingTime: { $gt: 12 } })
 
 ```javascript
 // Ta bort de dokument där fältet namn är en tom sträng eller null
-db.recipes.deleteMany({ $or: [{ namn: "" }, { namn: null }] })
+db.recipes.deleteMany({ $or: [{ name: "" }, { name: null }] })
 ```
