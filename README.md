@@ -7,7 +7,7 @@ use recipeDB
 db.createCollection("recipes")
 ```
 
-## Implementera grundläggande funktioner (CRUD) i `mongshell'
+## Implementera grundläggande funktioner (CRUD) i mongshell
 
 **1. Lägg till ett nytt recept (namn, ingredienser, tillagningssteg, tillagningstid)**
 
