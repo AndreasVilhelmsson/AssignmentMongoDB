@@ -1,4 +1,4 @@
-# Dana Ali MongoDB inlämning
+# Inlämningsrapport
 
 ## Skapa databas och samling
 
