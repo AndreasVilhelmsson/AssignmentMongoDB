@@ -118,7 +118,7 @@ db.recipes.deleteMany({ cookingTime: { $gt: 12 } })
 // Ta bort de dokument där fältet namn är en tom sträng eller null
 db.recipes.deleteMany({ $or: [{ name: "" }, { name: null }] })
 ```
-##5. För att öka kvaliten på en Collectiona kan man använda sig av ett så kallat JSON-schema som säkerställer att du fyller i alla fält som är required och med rätt typ av data 
+**5. För att öka kvaliten på en Collection kan man använda sig av ett så kallat JSON-schema som säkerställer att du fyller i alla fält som är required och med rätt typ av data 
 
 ```javascript
 {
