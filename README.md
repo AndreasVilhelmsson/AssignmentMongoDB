@@ -118,3 +118,52 @@ db.recipes.deleteMany({ cookingTime: { $gt: 12 } })
 // Ta bort de dokument där fältet namn är en tom sträng eller null
 db.recipes.deleteMany({ $or: [{ name: "" }, { name: null }] })
 ```
+##5. För att öka kvaliten på en Collectiona kan man använda sig av ett så kallat JSON-schema som säkerställer att du fyller i alla fält som är required och med rätt typ av data 
+
+```javascript
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["name", "cookingTime", "ingredients", "steps"],
+    "properties": {
+      "name": {
+        "bsonType": "string",
+        "description": "namnet på receptet, måste vara en sträng"
+      },
+      "cookingTime": {
+        "bsonType": "int",
+        "minimum": 1,
+        "description": "tillagningstid i minuter, måste vara ett positivt heltal"
+      },
+      "ingredients": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "string",
+          "description": "varje ingrediens måste vara en sträng"
+        },
+        "description": "en lista av ingredienser, varje ingrediens är en sträng"
+      },
+      "steps": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "string",
+          "description": "varje steg måste vara en sträng"
+        },
+        "description": "en lista av tillagningssteg, varje steg är en sträng"
+      },
+      "difficulty": {
+        "bsonType": "string",
+        "enum": ["easy", "medium", "hard"],
+        "description": "valfritt fält som anger svårighetsgraden på receptet"
+      },
+      "servings": {
+        "bsonType": "int",
+        "minimum": 1,
+        "description": "valfritt fält som anger antal portioner, måste vara ett positivt heltal"
+      }
+    }
+  }
+}
+
+```
+
