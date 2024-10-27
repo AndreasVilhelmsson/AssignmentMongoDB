@@ -36,4 +36,5 @@ Field: Ett fält är en nyckel-värdepar i ett dokument, där nyckeln är namnet
 ### Beskriv vad det är för skillnad på BSON och JSON
 
 BSON (Binary JSON) är ett binärt format som används internt av MongoDB för att lagra dokument. BSON liknar JSON men är optimerat för snabbare läs- och skrivprestanda och tillåter fler datatyper, som datum och binära data, vilket gör det mer effektivt för databasanvändning. JSON (JavaScript Object Notation) är ett textbaserat format som används för att strukturera data på ett lättläst sätt, ofta i webbsammanhang. BSON är en binär version av JSON och är mer kompakt samt stöder fler datatyper än standard JSON
+
 --- Skriv ovanför och ta inte bort denna raden ---
