@@ -85,8 +85,8 @@ db.recipes.aggregate([
 ```javascript
 // Uppdatera alla recept och lägg till ny rad i ingredienser 
 db.recipes.updateMany(
-    { ingredients: { $ne: "salt och peppar efter smak" } },  // Endast om det inte redan finns
-    { $push: { ingredients: "salt och peppar efter smak" } }
+    { ingredients: { $ne: "chili" } },  // Endast om det inte redan finns
+    { $push: { ingredients: "chili" } }
 )
 ```
 
