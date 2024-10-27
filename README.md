@@ -167,3 +167,32 @@ db.recipes.deleteMany({ $or: [{ name: "" }, { name: null }] })
 
 ```
 
+```js
+db.createCollection("recipes", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["name", "cookingTime", "ingredients", "steps"],
+      properties: {
+        name: { bsonType: "string" },
+        cookingTime: { bsonType: "int", minimum: 1 },
+        ingredients: {
+          bsonType: "array",
+          items: { bsonType: "string" }
+        },
+        steps: {
+          bsonType: "array",
+          items: { bsonType: "string" }
+        },
+        difficulty: {
+          bsonType: "string",
+          enum: ["easy", "medium", "hard"]
+        },
+        servings: { bsonType: "int", minimum: 1 }
+      }
+    }
+  }
+})
+
+```
+
